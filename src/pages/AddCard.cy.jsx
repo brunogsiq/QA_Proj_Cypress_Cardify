@@ -51,6 +51,26 @@ context(`${contexto} - Teste de Componentes.`, () =>
 				.and('have.text', 'Selecione um banco')
 		});
 
+		//Melhoria do código  após criação de looping.
+		it(`${teste}.${complemento} - Exemplo - Utilizando array de informações.`, () =>
+		{
+			cy.mount(<AddCard />)
+
+			cy.contains('button', 'Adicionar').click();
+
+			const alerts = [
+				'Número do cartão é obrigatório',
+				'Nome do titular é obrigatório',
+				'Data de expiração é obrigatória',
+				'CVV é obrigatório',
+				'Selecione um banco'
+			]
+
+			alerts.forEach((alert) => {
+				cy.AlertError_HaveText(alert)
+			})
+		});
+
 		it(`${teste}.${++complemento} - Campos obrigatório preenchidos - Número do cartão.`, () =>
 		{
 			
@@ -173,7 +193,7 @@ context(`${contexto} - Teste de Componentes.`, () =>
 			cy.AlertError_HaveText('Selecione um banco');
 		});
 
-		it.only(`${teste}.${++complemento} - Campos obrigatório preenchidos - Número + Nome + Data de Expiração + CVV + Banco do cartão.`, () =>
+		it(`${teste}.${++complemento} - Campos obrigatório preenchidos - Número + Nome + Data de Expiração + CVV + Banco do cartão.`, () =>
 		{
 			cy.mount(<AddCard />)
 
@@ -203,26 +223,6 @@ context(`${contexto} - Teste de Componentes.`, () =>
 
 			cy.get('.alertSucess')
 				.should('be.visible')
-		});
-
-		//Melhoria do código  após criação de looping.
-		it(`${teste}.${++complemento} - Exemplo - Não considerar.`, () =>
-		{
-			cy.mount(<AddCard />)
-
-			cy.contains('button', 'Adicionar').click();
-
-			const alerts = [
-				'Número do cartão é obrigatório',
-				'Nome do titular é obrigatório',
-				'Data de expiração é obrigatória',
-				'CVV é obrigatório',
-				'Selecione um banco'
-			]
-
-			alerts.forEach((alert) => {
-				cy.AlertError_HaveText(alert)
-			})
 		});
 	});
 });
