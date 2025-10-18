@@ -4,7 +4,7 @@
 > **Projeto prático:** Cardify — Fintech de carteiras digitais.  
 > Curso: *Domine os Testes de Componentes com Cypress e conquiste o controle da qualidade em aplicações modernas.*
 
-Link: https://www.udemy.com/course/testando-componentes-com-cypress/
+Link: https://www.udemy.com/course/testando-componentes-com-cypress/  
 Profº: Fernando Papito 
 
 ![Interface do Projeto](./src/assets/demo-add-card.png)
@@ -13,12 +13,16 @@ Profº: Fernando Papito
 
 ## ⚙️ Status & Badges
 
-![Node.js](https://img.shields.io/badge/node-%3E%3D18.0-green?logo=node.js&logoColor=white)
-![Cypress](https://img.shields.io/badge/cypress-13%2B-brightgreen?logo=cypress&logoColor=white)
-![React](https://img.shields.io/badge/react-18%2B-61DAFB?logo=react&logoColor=white)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Build](https://img.shields.io/badge/build-passing-success)
-![Status](https://img.shields.io/badge/status-active-success)
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-18%2B-339933?style=for-the-badge&logo=node.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Cypress-13%2B-17202C?style=for-the-badge&logo=cypress&logoColor=white"/>
+  <img src="https://img.shields.io/badge/React-18%2B-61DAFB?style=for-the-badge&logo=react&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TailwindCSS-3.4-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Build-Passing-success?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge"/>
+</p>
 
 ---
 
@@ -32,9 +36,8 @@ Profº: Fernando Papito
 6. [🧪 Exemplo de Teste de Componente](#-exemplo-de-teste-de-componente)  
 7. [🚀 Executando o Projeto Localmente](#-executando-o-projeto-localmente)  
 8. [🧾 Requisitos](#-requisitos)  
-9. [⚖️ Licença](#️-licença)  
-10. [📸 Demonstração](#-demonstração)  
-11. [💡 Dica](#-dica)
+9. [📸 Demonstração](#-demonstração)  
+10. [💡 Dica](#-dica)
 
 ---
 
@@ -183,13 +186,6 @@ npm run cy:open
 
 ---
 
-## ⚖️ Licença
-
-Distribuído sob a licença **MIT**.
-Sinta-se à vontade para usar o conteúdo como base de aprendizado ou referência profissional.
-
----
-
 ## 📸 Demonstração
 
 ![Adicionar Novo Cartão](./src/assets/demo-add-card.png)
@@ -207,3 +203,5 @@ Sinta-se à vontade para usar o conteúdo como base de aprendizado ou referênci
 **QA_Proj_Cypress_Cardify © 2025 — Criado para demonstrar o poder dos testes de componentes com Cypress.**
 
 ```
+
+---
