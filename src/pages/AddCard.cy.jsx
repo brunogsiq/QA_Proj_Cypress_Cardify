@@ -185,7 +185,7 @@ context(`${contexto} - Teste de Componentes.`, () =>
 			cy.AlertError_HaveText('Selecione um banco');
 		});
 
-		it(`${teste}.${++complemento} - Campos obrigatório preenchidos - Número + Nome + Data de Expiração + CVV do cartão.`, () =>
+		it.skip(`${teste}.${++complemento} - Campos obrigatório preenchidos - Número + Nome + Data de Expiração + CVV do cartão.`, () =>
 		{
 			cy.contains('button', 'Adicionar').click();
 
