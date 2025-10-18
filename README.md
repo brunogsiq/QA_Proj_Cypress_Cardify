@@ -1,43 +1,43 @@
-````markdown
 # 🧪 Domine os Testes de Componentes com Cypress
 
 > **Projeto prático:** Cardify — Fintech de carteiras digitais.  
 > Curso: *Domine os Testes de Componentes com Cypress e conquiste o controle da qualidade em aplicações modernas.*
 
-Link: https://www.udemy.com/course/testando-componentes-com-cypress/  
-Profº: Fernando Papito 
-
-![Interface do Projeto](./src/assets/demo-add-card.png)
-
 ---
-
-## ⚙️ Status & Badges
 
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-18%2B-339933?style=for-the-badge&logo=node.js&logoColor=white"/>
   <img src="https://img.shields.io/badge/Cypress-13%2B-17202C?style=for-the-badge&logo=cypress&logoColor=white"/>
   <img src="https://img.shields.io/badge/React-18%2B-61DAFB?style=for-the-badge&logo=react&logoColor=white"/>
-  <img src="https://img.shields.io/badge/TailwindCSS-3.4-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Build-Passing-success?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge"/>
+</p>
+
+---
+
+<p align="center">
+  <!-- Testes e QA -->
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypressio/cypressio-original.svg" title="Cypress" alt="Cypress" width="55" height="55"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="55" height="55"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" title="HTML5" alt="HTML5" width="55" height="55"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" title="CSS3" alt="CSS3" width="55" height="55"/>
+  <!-- Versionamento -->
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="Git" alt="Git" width="55" height="55"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" title="GitHub" alt="GitHub" width="55" height="55"/>
 </p>
 
 ---
 
 ## 📑 Sumário
 
-1. [📘 Visão Geral](#-visão-geral)  
-2. [🎯 O que você vai aprender](#-o-que-você-vai-aprender)  
-3. [🧩 Funcionalidade em foco](#-funcionalidade-em-foco)  
-4. [🧠 Tecnologias e Ferramentas](#-tecnologias-e-ferramentas)  
-5. [🧱 Estrutura do Projeto](#-estrutura-do-projeto)  
-6. [🧪 Exemplo de Teste de Componente](#-exemplo-de-teste-de-componente)  
-7. [🚀 Executando o Projeto Localmente](#-executando-o-projeto-localmente)  
-8. [🧾 Requisitos](#-requisitos)  
-9. [📸 Demonstração](#-demonstração)  
-10. [💡 Dica](#-dica)
+- [🧪 Domine os Testes de Componentes com Cypress](#-domine-os-testes-de-componentes-com-cypress)
+  - [📑 Sumário](#-sumário)
+  - [📘 Visão Geral](#-visão-geral)
+  - [🎯 O que você vai aprender](#-o-que-você-vai-aprender)
+  - [🧩 Funcionalidade em foco](#-funcionalidade-em-foco)
+    - [Adicionar Novo Cartão](#adicionar-novo-cartão)
+  - [🧠 Tecnologias e Ferramentas](#-tecnologias-e-ferramentas)
+  - [🧱 Estrutura do Projeto](#-estrutura-do-projeto)
+  - [🎓 Interface e link para o Curso](#-interface-e-link-para-o-curso)
 
 ---
 
@@ -120,88 +120,19 @@ QA_Proj_Cypress_Cardify/
 
 ---
 
-## 🧪 Exemplo de Teste de Componente
+## 🎓 Interface e link para o Curso
 
-```js
-context('1 - Teste de Componentes: AddCard', () => {
-  beforeEach(() => {
-    cy.mount(<AddCard />)
-  });
-
-  it('1.1 - Campos obrigatórios não preenchidos', () => {
-    cy.contains('button', 'Adicionar').click();
-
-    const alerts = [
-      'Número do cartão é obrigatório',
-      'Nome do titular é obrigatório',
-      'Data de expiração é obrigatória',
-      'CVV é obrigatório',
-      'Selecione um banco'
-    ];
-
-    alerts.forEach(alert => {
-      cy.contains('.alert-error', alert).should('be.visible');
-    });
-  });
-});
-```
+Link do curso na Udemy:
+👉 [**Domine os Testes de Componentes com Cypress**](https://www.udemy.com/course/testando-componentes-com-cypress/)
+Instrutor: **Fernando Papito**
 
 ---
 
-## 🚀 Executando o Projeto Localmente
-
-### 1️⃣ Clone o repositório
-
-```bash
-git clone https://github.com/SeuUsuario/QA_Proj_Cypress_Cardify.git
-cd QA_Proj_Cypress_Cardify
-```
-
-### 2️⃣ Instale as dependências
-
-```bash
-npm install
-```
-
-### 3️⃣ Execute o projeto React
-
-```bash
-npm run dev
-```
-
-### 4️⃣ Abra o Cypress Component Testing
-
-```bash
-npm run cy:open
-```
-
----
-
-## 🧾 Requisitos
-
-* **Node.js** e **npm** instalados
-* **Visual Studio Code** (recomendado)
-* Conhecimento básico em Cypress
-* **Git Bash** ou terminal compatível
-
----
-
-## 📸 Demonstração
-
-![Adicionar Novo Cartão](./src/assets/demo-add-card.png)
-
-> *Preencha os dados e veja a visualização do cartão em tempo real.*
-
----
-
-## 💡 Dica
-
-> Utilize os comandos customizados (`cy.preencheDadosCartao()` e `cy.enviaDadosCartao()`) para criar testes limpos, reutilizáveis e altamente legíveis.
-
----
-
-**QA_Proj_Cypress_Cardify © 2025 — Criado para demonstrar o poder dos testes de componentes com Cypress.**
-
+<p align="center">
+  <img src="./src/assets/demo-add-card.png" alt="Interface do Projeto: Adicionar Novo Cartão" width="800"/>
+  <br>
+  <em>🖼️ Tela principal — fluxo de adição de cartão e validação em tempo real.</em>
+</p>
 ```
 
 ---
