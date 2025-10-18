@@ -208,7 +208,7 @@ context(`${contexto} - Teste de Componentes.`, () =>
 			cy.AlertError_HaveText('Selecione um banco');
 		});
 
-		it.skip(`${teste}.${++complemento} - Campos obrigatório preenchidos - Número + Nome + Data de Expiração + CVV + Banco do cartão.`, () =>
+		/*it.skip(`${teste}.${++complemento} - Campos obrigatório preenchidos - Número + Nome + Data de Expiração + CVV + Banco do cartão.`, () =>
 		{
 			cy.contains('button', 'Adicionar').click();
 
@@ -236,7 +236,7 @@ context(`${contexto} - Teste de Componentes.`, () =>
 
 			cy.get('.alertSucess')
 				.should('be.visible')
-		});
+		});*/
 
 		it(`${teste}.${++complemento} - Cadastro realizado com sucesso.`, () =>
 		{
