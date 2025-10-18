@@ -223,6 +223,7 @@ const AddCard = () => {
                   Número do Cartão
                 </label>
                 <input
+                  data-cy="number"
                   type="text"
                   value={cardData.number}
                   onChange={(e) => handleInputChange('number', e.target.value)}
@@ -244,6 +245,7 @@ const AddCard = () => {
                   Nome do Titular
                 </label>
                 <input
+                  data-cy="holderName"
                   type="text"
                   value={cardData.holderName}
                   onChange={(e) => handleInputChange('holderName', e.target.value)}
@@ -255,7 +257,7 @@ const AddCard = () => {
                   }`}
                 />
                 {errors.holderName && (
-                  <p className=" alert-error mt-1 text-xs text-red-400 ml-2">{errors.holderName}</p>
+                  <p data-cy="AlertHolderName" className=" alert-error mt-1 text-xs text-red-400 ml-2">{errors.holderName}</p>
                 )}
               </div>
 
@@ -265,6 +267,7 @@ const AddCard = () => {
                     Validade
                   </label>
                   <input
+                    data-cy="expirationDate"
                     type="text"
                     value={cardData.expirationDate}
                     onChange={(e) => handleInputChange('expirationDate', e.target.value)}
@@ -287,6 +290,7 @@ const AddCard = () => {
                   </label>
                   <div className="relative">
                     <input
+                      data-cy="cvv"
                       type={showCVV ? 'text' : 'password'}
                       value={cardData.cvv}
                       onChange={(e) => handleInputChange('cvv', e.target.value)}
@@ -320,6 +324,7 @@ const AddCard = () => {
                   {banks.map(bank => {
                     return (
                       <button
+                        data-cy={`bank-${bank.value}`}
                         type="button"
                         key={bank.value}
                         onClick={() => handleInputChange('bank', bank.value)}
@@ -367,7 +372,7 @@ const AddCard = () => {
               )}
 
               {notification.message && (
-                <div className={`rounded-xl p-4 ${
+                <div className={`sucessMessage rounded-xl p-4 ${
                   notification.type === 'success' 
                     ? 'bg-green-500/10 border border-green-500' 
                     : 'bg-red-500/10 border border-red-500'
@@ -381,6 +386,7 @@ const AddCard = () => {
               )}
 
               <button
+                data-cy="saveMyCard"
                 type="submit"
                 disabled={loading}
                 className="w-full bg-lime-300 hover:bg-lime-400 disabled:bg-zinc-700 disabled:text-zinc-500 text-zinc-900 font-semibold py-3 px-6 rounded-xl transition-colors flex items-center justify-center"
